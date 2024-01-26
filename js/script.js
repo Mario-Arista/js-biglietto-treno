@@ -4,12 +4,16 @@
 
 // const kmNeeded = prompt("Inserisci i KM che devi percorrere")
 
+// console.log("KM inseriti dall'utente", kmNeeded);
+
 // const userAge = prompt("Inserisci la tua età")
+
+// console.log("età inserita dall'utente", userAge);
 
 // test
 const kmNeeded = 100;
 
-const userAge = 70;
+const userAge = 66;
 
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
 // va applicato uno sconto del 20% per i minorenni
@@ -17,10 +21,17 @@ const userAge = 70;
 // L'output del prezzo finale va messo fuori in forma umana
 // (con massimo due decimali, per indicare centesimi sul prezzo).
 
-let trainPrice = `${kmNeeded} * 0.21 + €`;
+let trainPrice = kmNeeded * 0.21;
 
 console.log("Prezzo treno in euro", trainPrice);
 
 if ( userAge < 18 ) {
+    document.getElementById("outputTicket").innerHTML = trainPrice * 0.80 + "€";
+    document.getElementById("message").innerHTML = "Dato che hai meno di 18 anni, hai uno sconto del 20%";
 
+} else if ( userAge > 65 ) {
+    document.getElementById("outputTicket").innerHTML = trainPrice * 0.60 + "€";
+    document.getElementById("message").innerHTML = "Dato che hai più di 65 anni, hai uno sconto del 20%";
+} else {
+    document.getElementById("outputTicket").innerHTML = trainPrice + "€";
 }

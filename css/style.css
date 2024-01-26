@@ -55,3 +55,43 @@ main {
     background-size: cover;
     background-position: center;
 }
+
+main > div {
+    position: relative;
+    top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 330px;
+    justify-content: center;
+    align-items: center;
+
+    
+    margin-left: 10px;
+
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+main h2 {
+    padding-top: 5px;
+    color: white;
+    
+}
+
+#outputTicket {
+    color: yellowgreen;
+    text-align: left;
+
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#message {
+    color: white;
+    font-style: italic;
+    font-size: 0.8em;
+    padding-bottom: 5px;
+}
