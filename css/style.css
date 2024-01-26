@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    margin: 0;box-sizing: border-box;
+}
+
+/* Reset Rules */
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    height: 100px;
+    
+    background-image: url(https://st.depositphotos.com/66878842/57664/v/450/depositphotos_576648234-stock-illustration-vector-seamless-pattern-with-wizard.jpg);
+}
+
+header > div {
+    display: flex;
+    width: 330px;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10px;
+
+    border-radius: 15px;
+    background-color: #8f070cd5;
+}
+
+header img {
+    width: 70px;
+}
+
+#titles_header {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 1.3em;
+    color: #E2AD12;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: black;
+}
+
+main {
+    height: calc(100vh - 100px);
+    background-image: url(https://wallpapers.com/images/hd/harry-potter-background-kbrb6vlqr8ych08x.jpg);
+    background-size: cover;
+    background-position: center;
+}
