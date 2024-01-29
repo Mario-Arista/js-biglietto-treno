@@ -52,17 +52,24 @@ if (choice === "media") {
         document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer carta: HAI PERSO!`;
         
     } if ( (cartaForbicePietra === "forbici") && (computerNumber === 2)); {
+
         document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, ma anche il computer: PAREGGIO!`;
+
     } if ( (cartaForbicePietra === "forbici") && (computerNumber === 3)); {
         document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer carta: HAI VINTO!`;
+
     } if ( (cartaForbicePietra === "forbici") && (computerNumber === 1)); {
         document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer pietra: HAI PERSO!`;
+
     } if ( (cartaForbicePietra === "carta") && (computerNumber === 3)); {
         document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, ma anche il computer: PAREGGIO!`;
+
     } if ( (cartaForbicePietra === "carta") && (computerNumber === 1)); {
         document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer pietra: HAI VINTO!`;
+
     } if ( (cartaForbicePietra === "carta") && (computerNumber === 2)); {
         document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer forbici: HAI PERSO!`;
+        
     }
 
 }
