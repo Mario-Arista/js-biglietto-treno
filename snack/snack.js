@@ -35,12 +35,38 @@ if (choice === "media") {
     document.getElementById("output").innerHTML = Number(temperatureCelsius * 9 / 5 + 32);
 
 } else (choice === "carta"); {
-    
+    const cartaForbicePietra = prompt("scegli e digita: carta, forbici o pietra e gioca con il computer");
+
+    const computerNumber = (Math.random() * 2 + 1).toFixed(0); 
+
+    if ( (cartaForbicePietra === "pietra") && (computerNumber === 1)); {
+
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, ma anche il computer: PAREGGIO!`;
+
+    } if ( (cartaForbicePietra === "pietra") && (computerNumber === 2)); {
+
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer forbici: HAI VINTO!`;
+
+    } if ( (cartaForbicePietra === "pietra") && (computerNumber === 3)); {
+
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer carta: HAI PERSO!`;
+        
+    } if ( (cartaForbicePietra === "forbici") && (computerNumber === 2)); {
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, ma anche il computer: PAREGGIO!`;
+    } if ( (cartaForbicePietra === "forbici") && (computerNumber === 3)); {
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer carta: HAI VINTO!`;
+    } if ( (cartaForbicePietra === "forbici") && (computerNumber === 1)); {
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer pietra: HAI PERSO!`;
+    } if ( (cartaForbicePietra === "carta") && (computerNumber === 3)); {
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, ma anche il computer: PAREGGIO!`;
+    } if ( (cartaForbicePietra === "carta") && (computerNumber === 1)); {
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer pietra: HAI VINTO!`;
+    } if ( (cartaForbicePietra === "carta") && (computerNumber === 2)); {
+        document.getElementById("message").innerHTML = `Hai digitato ${cartaForbicePietra}, e il computer forbici: HAI PERSO!`;
+    }
+
 }
 
-
-
-// Temperatura Celsius numero chiesto:
 
 
 
