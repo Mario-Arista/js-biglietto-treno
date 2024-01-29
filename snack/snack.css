@@ -23,7 +23,7 @@ main h2 {
     
 }
 
-#outputTemp {
+#output {
     color: yellowgreen;
     text-align: left;
 
@@ -33,7 +33,7 @@ main h2 {
     font-weight: bold;
 }
 
-#messageTemp {
+#message {
     color: white;
     font-style: italic;
     font-size: 0.8em;
