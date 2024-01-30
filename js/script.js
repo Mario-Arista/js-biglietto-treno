@@ -4,13 +4,29 @@ alert("Per sapere il prezzo del biglietto ti chiediamo di inserire i KM che devi
 
 // KM chiesti:
 
-let kmNeeded = Number(prompt("Inserisci i KM che devi percorrere"));
+const kmNeeded = Number(prompt("Inserisci i KM che devi percorrere?"));
+
+let error = false;
+
+if(isNaN(kmNeeded) || kmNeeded < 1) {
+    alert("Hai inserito un valore errato, inserisci un numero, almeno 1");
+    error = true;
+}
 
 console.log("età inserita dall'utente", kmNeeded);
 
 // Età chiesta:
 
-const userAge = Number(prompt("Inserisci la tua età"));
+let userAge;
+
+if (error == false) {
+    userAge = Number(prompt("Inserisci la tua età"));
+}
+
+    if (isNaN(userAge) || userAge < 0 || userAge > 110 ) {
+    alert("Hai inserito un valore errato, inserisci un numero maggiore di zero, minore di 110");
+    error = true;
+}
 
 console.log("età inserita dall'utente", userAge);
 

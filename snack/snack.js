@@ -38,19 +38,19 @@ if (choice === "media") {
     document.getElementById("message").innerHTML = `Hai digitato ${temperatureCelsius} gradi Celsius, quindi il suo equivalente in gradi Fahrenheit è`;
     document.getElementById("output").innerHTML = Number(temperatureCelsius * 9 / 5 + 32);
 
-} else (choice == "gioco"); {
+} else (choice === "gioco"); {
     
-    let gameApertivo = prompt("scegli e digita: carta, forbici o pietra e gioca con il computer");
+    const gameApertivo = prompt("scegli e digita: carta, forbici o pietra e gioca con il computer");
 
-    let computerNumber = (Math.random() * 3 + 1);
+    const computerNumber = (Math.random() * 3 + 1);
 
-    console.log("1pietra, 2 forbici, 3 carta", computerNumber)
+    console.log("1pietra, 2forbici, 3carta", computerNumber)
 
-    if ( (gameApertivo === "pietra") && (computerNumber >= 1) && (gameApertivo < 2)) {
+    if((gameApertivo === "pietra") && (computerNumber >= 1) && (computerNumber < 2)) {
 
         document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, ma anche il computer: PAREGGIO!`;
 
-    } else if ( (gameApertivo === "pietra") && (computerNumber >= 2) && (gameApertivo < 3)) {
+    } else if ( (gameApertivo === "pietra") && (computerNumber >= 2) && (computerNumber < 3)) {
 
         document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, e il computer forbici: HAI VINTO!`;
 
