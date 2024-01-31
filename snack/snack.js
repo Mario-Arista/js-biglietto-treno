@@ -1,13 +1,10 @@
 alert("Nel prossimo messagio digita quello che deisideri avere come output")
 
-let choice = prompt("DIGITA media, se vuoi calcolare la media tra tre numeri. DIGITA gioco, se vuoi giocare a carta forbice e pietra. DIGITA temp, se vuoi convertire gradi Celsius in Fahrenheit")
-console.log(choice)
+const choice = prompt("DIGITA media, se vuoi calcolare la media tra tre numeri. DIGITA gioco, se vuoi giocare a carta forbice e pietra. DIGITA temp, se vuoi convertire gradi Celsius in Fahrenheit")
+console.log(choice);
 
-let esperim = (Math.random() * 3 + 1);
-console.log("esperimento", esperim)
 
 if (choice === "media") {
-
 
     const FirstNumber = Number(prompt("Inserisci il primo numero casuale"));
 
@@ -38,53 +35,55 @@ if (choice === "media") {
     document.getElementById("message").innerHTML = `Hai digitato ${temperatureCelsius} gradi Celsius, quindi il suo equivalente in gradi Fahrenheit è`;
     document.getElementById("output").innerHTML = Number(temperatureCelsius * 9 / 5 + 32);
 
-} else (choice === "gioco"); {
-    
-    const gameApertivo = prompt("scegli e digita: carta, forbici o pietra e gioca con il computer");
+} else if (choice === "gioco") {
 
-    const computerNumber = (Math.random() * 3 + 1);
+    const carForPi = prompt("scegli e digita: carta, forbici o pietra e gioca con il computer");
+    console.log(carForPi);
 
-    console.log("1pietra, 2forbici, 3carta", computerNumber)
+    //  Variabili per carta = 3 / forbici = 2 / pietra = 1
 
-    if((gameApertivo === "pietra") && (computerNumber >= 1) && (computerNumber < 2)) {
+    let sceltaComputer = Math.floor(Math.random() * 3) + 1;
+    console.log(sceltaComputer);
 
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, ma anche il computer: PAREGGIO!`;
+    if( carForPi == "pietra") {
 
-    } else if ( (gameApertivo === "pietra") && (computerNumber >= 2) && (computerNumber < 3)) {
-
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, e il computer forbici: HAI VINTO!`;
-
-    } else ( (gameApertivo === "pietra") && (computerNumber >= 3)); {
-
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, e il computer carta: HAI PERSO!`;
-        
-    } 
-    
-    if ( (gameApertivo == "forbici") && (computerNumber >= 2) && (computerNumber < 3)) {
-
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, ma anche il computer: PAREGGIO!`;
-
-    } else if ( (gameApertivo == "forbici") && (computerNumber >= 3)) {
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, e il computer carta: HAI VINTO!`;
-
-    } else ( (gameApertivo == "forbici") && (computerNumber >= 1) && (computerNumber < 2)); {
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, e il computer forbici: HAI PERSO!`;
-
-    } 
-    
-    if ( (gameApertivo == "carta") && (computerNumber >= 3)) {
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, ma anche il computer: PAREGGIO!`;
-
-    } else if ( (gameApertivo == "carta") && (computerNumber >= 1) && (computerNumber < 2)) {
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, e il computer pietra: HAI VINTO!`;
-
-    } else ( (gameApertivo == "carta") && (computerNumber >= 2) && (computerNumber < 3)); {
-        document.getElementById("message").innerHTML = `Hai digitato ${gameApertivo}, e il computer forbici: HAI PERSO!`;
+        if (sceltaComputer == 1) {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, ma anche il computer: PAREGGIO!`;
+        } else if (sceltaComputer == 2) {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, e il computer forbici: HAI VINTO!`;
+        } else {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, e il computer carta: HAI PERSO!`;
+        }
 
     }
+    
+    if( carForPi == "forbici" ) {
+
+        if (sceltaComputer == 2) {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, ma anche il computer: PAREGGIO!`;
+        } else if (sceltaComputer == 3) {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, e il computer carta: HAI VINTO!`;
+        } else {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, e il computer pietra: HAI PERSO!`;
+        }
+    }
+
+    if( carForPi == "carta") {
+
+        if (sceltaComputer == 3) {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, ma anche il computer: PAREGGIO!`;
+        } else if (sceltaComputer == 1) {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, e il computer pietra: HAI VINTO!`;
+        } else {
+            document.getElementById("message").innerHTML = `Hai digitato ${carForPi}, e il computer forbici: HAI PERSO!`;
+        }
+
+        
+
+    } 
+
+} else {
+    document.getElementById("message").innerHTML = "Non hai fatto nessuna scelta!";
+
 
 }
-
-
-
-
